@@ -4,6 +4,7 @@
         environment:
           - APRS_CALL=
           - APRS_PASSCODE=
+          - MASTER_IP=
         volumes:
           - usersettings:/opt/volume/:rw
         image: 'shaymez/rysen-d-aprs:latest'
