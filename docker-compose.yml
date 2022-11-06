@@ -1,0 +1,12 @@
+    #Add this snippet to your docker-compose.yml
+    D-APRS:
+        container_name: D-APRS
+        environment:
+          - APRS_CALL=
+          - APRS_PASSCODE=
+        volumes:
+          - usersettings:/opt/volume/:rw
+        image: 'shaymez/rysen-d-aprs:latest'
+        #Container will persist over reboots
+        restart: "unless-stopped"
+
