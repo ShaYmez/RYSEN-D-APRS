@@ -21,4 +21,4 @@ jobs:
         run: |
           docker buildx build --push \
             --tag shaymez/rysen-d-aprs:latest \
-            --platform linux/arm/v7,linux/amd64,linux/i386,linux/arm64 .
+            --platform linux/amd64 .
