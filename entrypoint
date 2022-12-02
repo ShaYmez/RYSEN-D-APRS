@@ -22,7 +22,6 @@ cd /opt
 #Substitute enivronment variables into files
 sed -i "s/{{APRS_CALL}}/$APRS_CALL/" /opt/gps_data.cfg
 sed -i "s/{{APRS_PASSCODE}}/$APRS_PASSCODE/" /opt/gps_data.cfg
-sed -i "s/{MASTER_IP}}/$MASTER_IP/" /opt/gps_data.cfg
 
 
 python /opt/hbnet/gps_data.py -c /opt/gps_data.cfg
