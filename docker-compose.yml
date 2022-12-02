@@ -1,13 +1,14 @@
-    #Add this snippet to your docker-compose.yml
     D-APRS:
         container_name: D-APRS
         environment:
-          - APRS_CALL=
-          - APRS_PASSCODE=
-          - MASTER_IP=
+          - APRS_CALL=<Your Call>
+          - APRS_PASSCODE=<Your Pass>
         volumes:
-          - usersettings:/opt/volume/:rw
-        image: 'shaymez/rysen-d-aprs:latest'
+          - '/etc/rysen/aprs/gps_data.cfg:/opt/gps_data.cfg'
+          - '/etc/rysen/aprs/usersettings.txt:/usersettings/usersettings.txt'
+        image: 'gitlab.hacknix.net:5050/hacknix/docker-freedmr-kf7eel-gps_data:development-latest'
         #Container will persist over reboots
         restart: "unless-stopped"
-
+        networks:
+           app_net:
+             ipv4_address: 172.16.238.40
