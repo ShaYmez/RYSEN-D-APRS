@@ -1,4 +1,4 @@
-# Entrypoint for application
+#!/bin/ash
 cd /opt
 
 #Substitute enivronment variables into files
