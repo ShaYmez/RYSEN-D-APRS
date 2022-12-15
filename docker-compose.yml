@@ -3,8 +3,10 @@
         environment:
         #Enviroment variables
           - APRS_CALL=<YOUR CALL>
+          - APRS_SSID=<APRS SSID FOR YOUR CALL>
           - APRS_PASSCODE=<PASS>
-          - MASTER_IP=<External IP / Domain of this master>
+          - DMR_DATA_ID=<ENTER DMR TG / PRIVATE CALL NUMBER TO ROUTE APRS>
+          - MASTER_IP=<EXT IP OF MASTER / DOMAIN NAME>
         image: 'shaymez/rysen:latest'
         #Container will persist over reboots
         restart: "unless-stopped"
