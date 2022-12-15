@@ -1,4 +1,5 @@
-    D-APRS:
+   # Add this snippet into your docker-compose.yml file to include D-APRS into RYSEN / FreeDMR
+   D-APRS:
         container_name: D-APRS
         environment:
         #Enviroment variables
@@ -7,6 +8,7 @@
           - APRS_PASSCODE=<PASS>
           - DMR_DATA_ID=<ENTER DMR TG / PRIVATE CALL NUMBER TO ROUTE APRS>
           - MASTER_IP=<EXT IP OF MASTER / DOMAIN NAME>
+          - MASTER_PASS=<PASSWORD FOR MASTER>
         image: 'shaymez/rysen:latest'
         #Container will persist over reboots
         restart: "unless-stopped"
