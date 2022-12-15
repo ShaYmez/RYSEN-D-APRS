@@ -5,9 +5,6 @@
           - APRS_CALL=<YOUR CALL>
           - APRS_PASSCODE=<PASS>
           - MASTER_IP=<External IP / Domain of this master>
-        volumes:
-          - '/etc/rysen/aprs/gps_data.cfg:/opt/gps_data.cfg'
-          - '/etc/rysen/aprs/usersettings.txt:/usersettings/usersettings.txt'
         image: 'shaymez/rysen:latest'
         #Container will persist over reboots
         restart: "unless-stopped"
