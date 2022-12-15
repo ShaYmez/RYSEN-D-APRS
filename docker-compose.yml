@@ -3,9 +3,9 @@
         container_name: D-APRS
         environment:
         #Enviroment variables
-          - APRS_CALL=<YOUR CALL>
-          - APRS_SSID=<APRS SSID FOR YOUR CALL>
-          - APRS_PASSCODE=<PASS>
+          - APRS_CALL=<YOUR CALL INCLUDING YOUR SSID eg M1ABC-12>
+          - APRS_SSID=<APRS SSID FOR YOUR SERVER eg 12>
+          - APRS_PASSCODE=<PASSCODE GENERATED VIA MAGICBUG>
           - DATA_DMR_ID=<ENTER DMR TG / PRIVATE CALL NUMBER TO ROUTE APRS>
           - MASTER_IP=<EXT IP OF MASTER / DOMAIN NAME>
           - MASTER_PASS=<PASSWORD FOR MASTER>
