@@ -1,6 +1,11 @@
    # Add this snippet into your docker-compose.yml file to include D-APRS into RYSEN / FreeDMR
    D-APRS:
         container_name: D-APRS
+        volumes:
+        #Read JSON files outside of container (Download JSON externally!)
+          - '/etc/rysen/json/peer_ids.json:/opt/usersettings/peer_ids.json'
+          - '/etc/rysen/json/subscriber_ids.json:/opt/usersettings/subscriber_ids.json'
+          - '/etc/rysen/json/talkgroup_ids.json:/opt/usersettings/talkgroup_ids.json'
         environment:
         #Enviroment variables
           - APRS_CALL=<YOUR CALL INCLUDING YOUR SSID eg M1ABC-12>
