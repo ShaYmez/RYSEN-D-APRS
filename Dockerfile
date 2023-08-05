@@ -10,8 +10,10 @@ VOLUME /usersettings
 RUN adduser -D -u 54000 radio && \
         apk update && \
         apk add git gcc g++ musl-dev && \
+	pip install --upgrade pip && \
+        pip cache purge && \
         cd /opt && \
-        git clone https://github.com/kf7eel/hbnet.git hbnet && \
+        git clone https://github.com/shaymez/hbnet.git hbnet && \
         cd /opt/hbnet && \
 	git checkout gps && \
         pip install --no-cache-dir -r requirements.txt && \
