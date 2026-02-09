@@ -10,4 +10,4 @@ sed -i "s/{{MASTER_IP}}/$MASTER_IP/" /opt/gps_data.cfg
 sed -i "s/{{MASTER_PASS}}/$MASTER_PASS/" /opt/gps_data.cfg
 
 
-python /opt/hbnet/gps_data.py -c /opt/gps_data.cfg
+python /opt/hbnet/data_gateway.py -c /opt/gps_data.cfg
