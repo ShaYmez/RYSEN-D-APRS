@@ -15,7 +15,7 @@ RUN adduser -D -u 54000 radio && \
         cd /opt && \
         git clone https://github.com/shaymez/hbnet.git hbnet && \
         cd /opt/hbnet && \
-	git checkout hbnet && \    # ← CHANGED FROM 'gps' TO 'hbnet'
+	git checkout hbnet && \ 
         pip install --no-cache-dir -r requirements.txt && \
         apk del git gcc musl-dev && \
         chown -R radio: /opt/ && \
