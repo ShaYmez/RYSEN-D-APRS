@@ -9,7 +9,7 @@ VOLUME /usersettings
 
 RUN adduser -D -u 54000 radio && \
         apk update && \
-        apk add git gcc g++ musl-dev && \
+        apk add git gcc g++ musl-dev libffi-dev && \
 	pip install --upgrade pip && \
         pip cache purge && \
         cd /opt && \
